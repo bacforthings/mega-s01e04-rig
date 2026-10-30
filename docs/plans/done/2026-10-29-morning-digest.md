@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-10-30
 ---
 
 # Morning digest
@@ -77,3 +78,20 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Completion
+
+The reviewer confirmed the preview before cleanup. The same public URL was then verified with the marker unset, and the plan was archived.
+
+## Issues
+
+| # | Issue | Section | Blocked by | Worker | Done |
+|---|-------|---------|------------|--------|------|
+| 1 | [Shared digest types](https://github.com/bacforthings/mega-s01e04-rig/issues/1) | 1 | — | Codex · gpt-6-astra · high | Shared row, result and reader contracts committed. |
+| 2 | [Run log reader](https://github.com/bacforthings/mega-s01e04-rig/issues/2) | 1 | #1 | Codex · gpt-6-astra · high | Aggregates the night log, counts bad lines and preserves missing/empty distinctions. |
+| 3 | [Digest page: GET /digest/:night](https://github.com/bacforthings/mega-s01e04-rig/issues/3) | 2a | #1 | Codex · gpt-6-luna · high | Renders sorted rows with warnings, missing-owner and empty/404 handling. |
+| 4 | [Digest JSON: GET /api/digest/:night](https://github.com/bacforthings/mega-s01e04-rig/issues/4) | 2b | #1 | Codex · gpt-6-luna · high | Serves the same ordered digest as JSON, including empty/missing-night handling. |
+| 5 | [Status board: digest links and counts](https://github.com/bacforthings/mega-s01e04-rig/issues/5) | 2c | #1 | Codex · gpt-6-luna · high | Links nights on disk to their digests with event counts. |
+| 6 | [Digest route checks](https://github.com/bacforthings/mega-s01e04-rig/issues/6) | 2d | #1 | Codex · gpt-6-luna · high | Covers route parity, missing/empty nights, malformed lines, escaping and offsets. |
+| 7 | [Public review preview](https://github.com/bacforthings/mega-s01e04-rig/issues/7) | 3 | #2–#6 | Codex · gpt-6-luna · high | Preview was published and the course confirmed it was sent to the reviewer. |
+| 8 | [Preview cleanup after review](https://github.com/bacforthings/mega-s01e04-rig/issues/8) | 4 | #7 | Codex · gpt-6-luna · high | Same public URL verified marker-free; this plan archived. |
